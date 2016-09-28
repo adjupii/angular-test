@@ -1,0 +1,58 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+#wrapper {
+  padding-top: 51px;
+}
+
+.editable-hide {
+  display: none;
+}
+
+.company-fields {
+  padding-top: 30px;
+}
+
+.company-fields .form-inline {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.company-fields .company-field-name {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.saving-loader {
+  margin: 0 0 0 10px;
+}
+
+#news .list-group-item {
+  position: relative;
+}
+
+#news .loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(211, 211, 211, 0.8);
+  top: 0;
+  left: 0;
+}
+
+#news .loader .loader-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.statistics-chart {
+  width: 100%;
+  height: 500px;
+}

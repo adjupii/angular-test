@@ -1,0 +1,17 @@
+<loader data-ng-if="loader.state"></loader>
+
+<div id="news" data-ng-if="!loader.state">
+  <h2>News</h2>
+  <ul class="list-group">
+    <li class="list-group-item" data-ng-repeat="item in news">
+      <img data-ng-src="assets/images/{{item.img}}" class="img-responsive" alt="" />
+      <h3>{{item.title}}</h3>
+      <p>{{item.description}}</p>
+      <button type="button" class="btn btn-primary">Like</button>
+      <button data-ng-if="editable" data-ng-click="edit(item)" type="button" class="btn btn-primary">Edit</button>
+      <div class="loader" data-ng-if="editable" data-ng-show="loaderNews[item.id].state">
+        <h2 class="loader-text">Saving...</h2>
+      </div>
+    </li>
+  </ul>
+</div>

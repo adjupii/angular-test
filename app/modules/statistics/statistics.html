@@ -1,0 +1,12 @@
+<loader data-ng-if="loader.state"></loader>
+
+<div id="statistics" data-ng-if="!loader.state">
+  <h2>Statistics</h2>
+
+  <div
+    data-ac-chart="'bar'"
+    data-ac-data="data"
+    data-ac-config="config"
+    class="statistics-chart">
+  </div>
+</div>

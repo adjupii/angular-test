@@ -1,0 +1,45 @@
+<loader data-ng-if="loader.state"></loader>
+
+<div id="company" data-ng-if="!loader.state">
+  <h2>{{company.title}}</h2>
+  <h3>{{company.description}}</h3>
+  <div class="company-fields" data-ng-if="editable">
+    <h4 class="clearfix">
+      <span class="company-field-name">Date:</span>
+      <a
+        data-editable-bsdate="company.date"
+        data-e-is-open="opened.$data"
+        data-e-ng-click="open($event, '$data')"
+        data-e-datepicker-popup="dd-MMMM-yyyy"
+        data-buttons="no"
+        onbeforesave="updateField({field: 'date', data: $data})">
+          {{(company.date | date:"dd/MM/yyyy")}}
+      </a>
+      <span data-ng-show="loaderField.date.state" class="saving-loader">Saving...</span>
+    </h4>
+    <h4 class="clearfix">
+      <span class="company-field-name">Number:</span>
+      <a data-editable-text="company.number" data-buttons="no" onbeforesave="updateField({field: 'number', data: $data})">{{company.number}}</a>
+      <span data-ng-show="loaderField.number.state" class="saving-loader">Saving...</span>
+    </h4>
+    <h4 class="clearfix">
+      <span class="company-field-name">Text:</span>
+      <a data-editable-text="company.text" data-buttons="no" onbeforesave="updateField({field: 'text', data: $data})">{{company.text}}</a>
+      <span data-ng-show="loaderField.text.state" class="saving-loader">Saving...</span>
+    </h4>
+  </div>
+  <div class="company-fields" data-ng-if="!editable">
+    <h4>
+      <span class="company-field-name">Date:</span>
+      <span>{{(company.date | date:"dd/MM/yyyy")}}</span>
+    </h4>
+    <h4>
+      <span class="company-field-name">Number:</span>
+      <span>{{company.number}}</span>
+    </h4>
+    <h4>
+      <span class="company-field-name">Text:</span>
+      <span>{{company.text}}</span>
+    </h4>
+  </div>
+</div>

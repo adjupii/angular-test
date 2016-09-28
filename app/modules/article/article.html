@@ -1,0 +1,36 @@
+<loader data-ng-if="loader.state"></loader>
+
+<div id="article" data-ng-if="!loader.state">
+  <h2>Edit article</h2>
+
+  <form name="editArticleForm" data-ng-submit="saveArticle(article)" novalidate>
+    <div class="form-group" data-ng-class="{'has-error': editArticleForm.title.$invalid}">
+      <label for="article-title-{{article.id}}">Title</label>
+      <input type="text" name="title" class="form-control" id="article-title-{{article.id}}" data-ng-model="article.title" data-ng-disabled="loaderSave.state" required>
+    </div>
+    <div class="form-group" data-ng-show="editArticleForm.title.$invalid">
+      <span class="text-danger">Field required</span>
+    </div>
+
+    <div class="form-group" data-ng-class="{'has-error': editArticleForm.author.$invalid}">
+      <label for="article-author-{{article.id}}">Author</label>
+      <input type="text" name="author" class="form-control" id="article-author-{{article.id}}" data-ng-model="article.author" data-ng-disabled="loaderSave.state" required>
+    </div>
+    <div class="form-group" data-ng-show="editArticleForm.author.$invalid">
+      <span class="text-danger">Field required</span>
+    </div>
+
+    <div class="form-group" data-ng-class="{'has-error': editArticleForm.description.$invalid}">
+      <label for="article-desc-{{article.id}}">Description</label>
+      <textarea name="description" class="form-control" id="article-desc-{{article.id}}" rows="3" data-ng-model="article.description" data-ng-disabled="loaderSave.state" required></textarea>
+    </div>
+    <div class="form-group" data-ng-show="editArticleForm.description.$invalid">
+      <span class="text-danger">Field required</span>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-default" data-ng-disabled="editArticleForm.$invalid">Save</button>
+      <span data-ng-show="loaderSave.state" class="saving-loader">Saving...</span>
+    </div>
+  </form>
+</div>

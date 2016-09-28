@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Test",
+  "author": "Alex Djupii",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "bower install",
+    "build": "NODE_ENV=production gulp build",
+    "dev": "NODE_ENV=development gulp build"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-environments": "^0.1.1",
+    "gulp-filter": "^4.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.2"
+  }
+}

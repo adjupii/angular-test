@@ -1,0 +1,34 @@
+{
+  "objects": [
+    {
+      "id": 1,
+      "title": "News 1 title",
+      "description": "News 1 description",
+      "img": "img-1.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "News 2 title",
+      "description": "News 2 description",
+      "img": "img-1.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "News 3 title",
+      "description": "News 3 description",
+      "img": "img-1.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "News 4 title",
+      "description": "News 4 description",
+      "img": "img-1.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "News 5 title",
+      "description": "News 5 description",
+      "img": "img-1.jpeg"
+    }
+  ]
+}
